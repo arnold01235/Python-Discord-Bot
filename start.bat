@@ -1,0 +1,9 @@
+@echo off
+echo Starting bot...
+start /b python bot.py
+echo Press any key to stop the bot...
+pause > nul
+echo Stopping bot...
+taskkill /f /im python.exe
+echo Bot stopped.
+pause
