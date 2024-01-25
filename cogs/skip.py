@@ -38,12 +38,12 @@ class Template(commands.Cog, name="template"):
 
 
     @commands.hybrid_command(
-        name="calibrate",
+        name="info",
         description="Posts the current position of the cursor.",
     )
-    async def calibrate(self, context: Context) -> None:
-        self.x, self.y = pyautogui.position()
-        await context.send(f"Current cursor position: ({self.x}, {self.y})")
+    async def info(self, context: Context) -> None:
+        x, y = pyautogui.position()
+        await context.send(f"Current cursor position: ({x}, {y})")
 
 
 async def setup(bot) -> None:
